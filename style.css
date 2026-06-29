@@ -1,0 +1,152 @@
+:root {
+    --primary: #4a90e2;
+    --dark: #2c3e50;
+    --light: #f5f7fa;
+    --white: #ffffff;
+}
+
+body {
+    background: var(--light);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    padding: 12px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.status-msg {
+    text-align: center;
+    padding: 15px;
+    background: #e1f5fe;
+    border-radius: 8px;
+    color: #0288d1;
+}
+
+.status-msg.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.weather-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 15px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#country-code {
+    background: #edf2f7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.main-info {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#temperature {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.unit {
+    font-size: 2rem;
+    vertical-align: super;
+    color: var(--primary);
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #edf2f7;
+    padding-top: 15px;
+}
+
+.info-item small {
+    color: #a0aec0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
