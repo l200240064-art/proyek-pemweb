@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca Dinamis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Weather App v2</h1>
+            <p>Integrasi Eksternal Public API & Pengolahan Data JSON</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Ketik nama kota (misal: Jakarta, Tokyo)...">
+                <button id="search-btn">Cari Cuaca</button>
+            </div>
+
+            <div id="loading" class="status-msg" style="display: none;">
+                <p>Mengambil data dari API eksternal...</p>
+            </div>
+
+            <div id="error-msg" class="status-msg error" style="display: none;">
+                <p>Gagal memuat data. Pastikan nama kota benar atau periksa koneksi internet.</p>
+            </div>
+
+            <section id="weather-card" class="weather-card" style="display: none;">
+                <div class="card-header">
+                    <h2 id="city-name">Nama Kota</h2>
+                    <span id="country-code">ID</span>
+                </div>
+                <div class="card-body">
+                    <div class="main-info">
+                        <span id="temperature">--</span><span class="unit">°C</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="info-item">
+                            <small>Kelembapan</small>
+                            <p id="humidity">-- %</p>
+                        </div>
+                        <div class="info-item">
+                            <small>Kondisi (Kode)</small>
+                            <p id="weather-code">--</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
